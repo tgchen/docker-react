@@ -6,5 +6,5 @@ before_install:
   - docker build -t wynetech/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run wynetech/docker-react npm run test -- --coverage
+  - docker run -e CI=true wynetech/docker-react npm run test -- --coverage
 
